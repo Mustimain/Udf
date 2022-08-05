@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
+    <PackageReference Include="Prism.Forms" Version="8.1.97" />
+    <PackageReference Include="Prism.Unity.Forms" Version="8.1.97" />
+    <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete" Version="20.2.0.40" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="20.2.0.40" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Prism.Core" />
+    <None Remove="Prism.Forms" />
+    <None Remove="Prism.Unity.Forms" />
+    <None Remove="Base\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Views\" />
+    <None Remove="CustomControls\" />
+    <None Remove="Syncfusion.Xamarin.SfAutoComplete" />
+    <None Remove="Syncfusion.Xamarin.Core" />
+    <None Remove="Xamarin.FFImageLoading.Svg" />
+    <None Remove="Xamarin.FFImageLoading.Svg.Forms" />
+    <None Remove="Extensions\" />
+    <None Remove="Images\" />
+    <None Remove="Images\bgg.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Base\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
+    <Folder Include="CustomControls\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\bgg.svg" />
+  </ItemGroup>
+</Project>

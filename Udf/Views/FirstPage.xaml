@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism = "http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    xmlns:local = "clr-namespace:Udf.Extensions"
+    x:Class="Udf.Views.FirstPage">
+
+    <StackLayout BackgroundColor="#04021D" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+            
+              <Image AbsoluteLayout.LayoutFlags="SizeProportional"  AbsoluteLayout.LayoutBounds="{x:OnIdiom Tablet='0,0,1,0.568', Phone= '0,0,1,0.38'}" BackgroundColor="Transparent" Source="bg1.png" ></Image>
+
+            <AbsoluteLayout BackgroundColor="Transparent" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" >
+
+                <StackLayout  BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0.5,0.2,0.8,0.3" AbsoluteLayout.LayoutFlags="All" >
+
+                    <Image Margin="5,0,0,0" Source="logo.png" HeightRequest="{x:OnIdiom Phone='40',Tablet='72'}" WidthRequest="{x:OnIdiom Phone='40',Tablet='72'}" HorizontalOptions="Start" ></Image>
+
+                    <Label Margin="0,30,0,0" Text="Udf Portal'a" FontAttributes="Bold" FontSize="{x:OnIdiom Phone='32',Tablet='56'}" TextColor="#E6E9F3"></Label>
+                    <Label Text="Hoşgeldin" FontAttributes="Bold" FontSize="{x:OnIdiom Phone='32',Tablet='56'}" TextColor="#E6E9F3"></Label>
+
+
+                    <Label Margin="0,30,0,0"  Text="Udf Portal ile udf formatları oluşturun"  FontSize="{x:OnIdiom Phone='16',Tablet='32'}" TextColor="#686777"></Label>
+                    <Label   Text="düzenleyin ve paylaşın!" FontSize="{x:OnIdiom Phone='16',Tablet='32'}" TextColor="#686777"></Label>
+
+                </StackLayout>
+
+
+                <StackLayout BackgroundColor="Transparent" Orientation="Horizontal" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.93" >
+                    <Frame HasShadow="False" Margin="0,0,2,0" Padding="0" BackgroundColor="#F4F5F7" CornerRadius="10" HorizontalOptions="FillAndExpand">
+                        <Button Command="{Binding RegisterCommand}" FontSize="{x:OnIdiom Phone='16',Tablet='24'}" FontAttributes="Bold" WidthRequest="{x:OnIdiom Phone='156',Tablet='230'}" HeightRequest="{x:OnIdiom Phone='56',Tablet='72'}" Text="Kayıt Ol" TextColor="#36354A" BackgroundColor="Transparent"></Button>
+
+                    </Frame>
+
+                    <Frame HasShadow="False" Margin="2,0,0,0"  Padding="0" BackgroundColor="#36354A" CornerRadius="10" HorizontalOptions="FillAndExpand">
+                        <Button FontSize="{x:OnIdiom Phone='16',Tablet='24'}" FontAttributes="Bold"  WidthRequest="{x:OnIdiom Phone='156',Tablet='230'}" HeightRequest="{x:OnIdiom Phone='56',Tablet='72'}" Text="Giriş Yap" TextColor="#F4F5F7" BackgroundColor="Transparent"></Button>
+
+                    </Frame>
+                </StackLayout>
+            </AbsoluteLayout>
+
+
+        </AbsoluteLayout>
+
+    </StackLayout>
+
+
+</ContentPage>

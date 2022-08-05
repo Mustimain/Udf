@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism = "http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    xmlns:custom = "clr-namespace:Udf.CustomControls"
+    x:Class="Udf.Views.RegisterPage" BackgroundColor="#04021D">
+
+    <StackLayout BackgroundColor="#04021D" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+            <Frame BackgroundColor="Transparent" Padding="0" HasShadow="False" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.07,0.05">
+                <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BackCommand}"></TapGestureRecognizer>
+                    </Frame.GestureRecognizers>
+                <Image Source="backButton" HeightRequest="{x:OnIdiom Tablet='30',Phone='20'}" WidthRequest="{x:OnIdiom Tablet='30',Phone='20'}" ></Image>
+
+            </Frame>
+            <Image BackgroundColor="Transparent" Source="bg1.png" AbsoluteLayout.LayoutFlags="All"  AbsoluteLayout.LayoutBounds="{x:OnIdiom Tablet='0,0,1,0.568', Phone= '0,0,1,0.38'}"  ></Image>
+
+
+            <StackLayout  AbsoluteLayout.LayoutBounds="0.3,0.2,0.8,0.12" AbsoluteLayout.LayoutFlags="All">
+                <Label Text="Hadi Kayıt Olalım!" FontAttributes="Bold" FontSize="{x:OnIdiom Phone='32',Tablet='56'}" TextColor="#E6E9F3"></Label>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="Transparent" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.3,0.25,0.8,0.07">
+
+                <Label  Text="Çalışma Alanına"  FontSize="{x:OnIdiom Phone='28',Tablet='48'}" TextColor="#686777"></Label>
+                <Label   Text="Hoşgeldin!" FontSize="{x:OnIdiom Phone='28',Tablet='48'}" TextColor="#686777"></Label>
+            </StackLayout>
+
+
+            <StackLayout  BackgroundColor="Transparent" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.5,0.9,0.13">
+                <StackLayout  >
+                    <custom:CustomEntry BackgroundColor="Transparent" Margin="0,0,0,5" AbsoluteLayout.LayoutFlags="All"  HeightRequest="{x:OnIdiom Phone='56',Tablet='72'}" TextColor="White" Placeholder="Email" PlaceholderColor="#E6E9F3" FontSize="{x:OnIdiom Phone='16',Tablet='20'}" ></custom:CustomEntry>
+                    <custom:CustomEntry BackgroundColor="Transparent" Margin="0,5,0,0" AbsoluteLayout.LayoutFlags="All"  HeightRequest="{x:OnIdiom Phone='56',Tablet='72'}" IsPassword="True"  TextColor="White" PlaceholderColor="#E6E9F3" Placeholder="Password" FontSize="{x:OnIdiom Phone='16',Tablet='20'}"  ></custom:CustomEntry>
+                    <Label AbsoluteLayout.LayoutFlags="All"  Margin="10,10,0,0" Text="Şifremi unuttum" FontSize="{x:OnIdiom Phone='14',Tablet='18'}" TextColor="#F4F5F7" FontAttributes="Bold">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer ></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+            </StackLayout>
+
+
+            <StackLayout BackgroundColor="Transparent" Orientation="Horizontal" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.93">
+                <Frame  Padding="0" BackgroundColor="#F4F5F7" CornerRadius="10" WidthRequest="{x:OnIdiom Phone='350',Tablet='300'}">
+                    <Button FontSize="{x:OnIdiom Phone='16',Tablet='24'}" FontAttributes="Bold" HeightRequest="{x:OnIdiom Phone='56',Tablet='72'}" WidthRequest="{x:OnIdiom Phone='350',Tablet='300'}"  Text="Kayıt Ol" TextColor="#36354A" BackgroundColor="Transparent"></Button>
+
+                </Frame>
+
+            </StackLayout>
+
+        </AbsoluteLayout>
+    </StackLayout>
+
+
+
+
+</ContentPage>
